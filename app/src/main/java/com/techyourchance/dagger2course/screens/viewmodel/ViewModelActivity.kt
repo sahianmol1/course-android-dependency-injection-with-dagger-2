@@ -17,6 +17,7 @@ class ViewModelActivity : BaseActivity() {
     @Inject lateinit var screensNavigator: ScreensNavigator
     @Inject lateinit var viewModelFactory: MyViewModelFactory
     private lateinit var viewModel: MyViewModel
+    private lateinit var viewModel2: MyViewModel2
 
     private lateinit var toolbar: MyToolbar
 
@@ -32,6 +33,7 @@ class ViewModelActivity : BaseActivity() {
         }
 
         viewModel = ViewModelProvider(this, viewModelFactory).get(MyViewModel::class.java)
+        viewModel2 = ViewModelProvider(this, viewModelFactory).get(MyViewModel2::class.java)
 
         viewModel.questions.observe(this, Observer {
             Toast.makeText(this, "Fetched ${it.size} questions", Toast.LENGTH_LONG).show()
