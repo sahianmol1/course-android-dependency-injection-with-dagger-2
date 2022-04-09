@@ -9,7 +9,7 @@ import com.techyourchance.dagger2course.questions.Question
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class MyViewModel @Inject constructor(private val fetchQuestionsUseCase: FetchQuestionsUseCase): ViewModel() {
+class MyViewModel2 @Inject constructor(private val fetchQuestionsUseCase: FetchQuestionsUseCase): ViewModel() {
 
     private val _questions = MutableLiveData<List<Question>>()
     val questions : LiveData<List<Question>> = _questions
@@ -24,5 +24,4 @@ class MyViewModel @Inject constructor(private val fetchQuestionsUseCase: FetchQu
             }
         }
     }
-
 }
